@@ -6,7 +6,7 @@ from telethon.tl.types import (
 
 from userbot.events import geezbot_cmd
 from userbot import CUSTOM_CMD as geez
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="unban(all)\\s?(.)?"))
