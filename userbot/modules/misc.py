@@ -99,7 +99,7 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "╭‒─‒──────────‒─‒\n"
         "│                   ʀᴇᴘᴏ\n"
-        "│       [⚡Geez-Project⚡](https://github.com/Vckyou/Geez-UserBot)\n"
+        "│       [⚡Geez-Project⚡](https://github.com/Vckyou/GeezProjects)\n"
         "├‒─‒──────────‒\n"
         "│🔰 **ᴏᴡɴᴇʀ :** [Geez](t.me/VckyouuBitch)\n"
         "╰‒─‒──────────\n"
