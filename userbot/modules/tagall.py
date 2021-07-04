@@ -14,7 +14,8 @@ from userbot import CUSTOM_CMD as geez
 from userbot import CMD_HELP, bot
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern=r"(?:tag(on|off|all|bots|rec|admins|owner)\s?(.)?"))
+@bot.on(geezbot_cmd(outgoing=True,
+                    pattern=r"(?:tag(on|off|all|bots|rec|admins|owner)\s?(.)?"))
 async def _(e):
     okk = e.text
     lll = e.pattern_match.group(2)
