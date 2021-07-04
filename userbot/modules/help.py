@@ -32,7 +32,7 @@ async def help(event):
             \n│  Untuk melihat lengkap CMD\
             \n│  Contoh: {geez}help <nama module>\
             \n│  Modules Aktif: {len(modules)}\
-           \n╰─────────────────)
+           \n╰─────────────────")
         string=""
         for i in CMD_HELP:
             string += "`" + str(i)
