@@ -1,13 +1,25 @@
+# Thanks Full To Team Ultroid
+# Ported By Vcky @VckyouuBitch
+#
+# Copyright (c) 2021 Geez - Projects
+#
+# Geez - Projects https://github.com/Vckyou/Geez-UserBot
+# 
+
 import os
 
 from telegraph import Telegraph
 from telegraph import upload_file as uf
 
+from userbot import CMD_HELP, bot, ALIVE_NAME
+from userbot.events import geezbot_cmd
+from userbot import CUSTOM_CMD as geez
+
 
 # Telegraph Things
 telegraph = Telegraph()
 try:
-    telegraph.create_account(short_name=OWNER_NAME)
+    telegraph.create_account(short_name=ALIVE_NAME)
 
 except BaseException:
     telegraph.create_account(short_name="Geez")
