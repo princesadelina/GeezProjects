@@ -3,13 +3,13 @@
 ![Geez UserBot](https://telegra.ph/file/9695504a3c013f90b6755.gif)
 
 <p align="left">
-  <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
+  <a href="https://github.com/vckyou/GeezProjects/fork"><img src="https://img.shields.io/github/forks/vckyou/GeezProjects?label=Fork&style=social"></a>
   </p>
 <p align="left">
-  <a href="https://github.com/vckyou/Geez-UserBot"><img src="https://img.shields.io/github/stars/vckyou/Geez-UserBot?style=social"></a>
+  <a href="https://github.com/vckyou/GeezProjects"><img src="https://img.shields.io/github/stars/vckyou/GeezProjects?style=social"></a>
   </p>
 <p align="left">
-  <a href="https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE"><img src="https://img.shields.io/github/license/vckyou/Geez-UserBot?&style=social&logo=github">
+  <a href="https://github.com/vckyou/GeezProjects/blob/master/LICENSE"><img src="https://img.shields.io/github/license/vckyou/GeezProjects?&style=social&logo=github">
   </a></p>
 
 <a href="https://t.me/GeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
