@@ -1,63 +1,91 @@
+import asyncio
+import calendar
+import html
+import io
 import os
-from datetime import datetime
+import time
+from datetime import datetime as dt
 
-from PIL import Image
-from telegraph import Telegraph, exceptions, upload_file
+import requests
+from telegraph import Telegraph
+from telegraph import upload_file as uf
+from telethon.events import NewMessage
+from telethon.tl.custom import Dialog
+from telethon.tl.functions.channels import (
+    GetAdminedPublicChannelsRequest,
+    InviteToChannelRequest,
+    LeaveChannelRequest,
+)
+from telethon.tl.functions.contacts import GetBlockedRequest
+from telethon.tl.functions.messages import AddChatUserRequest, GetAllStickersRequest
+from telethon.tl.functions.photos import GetUserPhotosRequest
+from telethon.tl.types import Channel, Chat, InputMediaPoll, Poll, PollAnswer, User
+from telethon.utils import get_input_location
 
-from userbot import CMD_HELP, bot
-from userbot.events import geezbot_cmd
-from userbot import CUSTOM_CMD as geez
 
-path = "TEMP_DOWNLOAD_DIRECTORY"
 
+# Telegraph Things
 telegraph = Telegraph()
-r = telegraph.create_account(short_name="telegraph")
-auth_url = r["auth_url"]
+try:
+    telegraph.create_account(short_name=OWNER_NAME)
+
+except BaseException:
+    telegraph.create_account(short_name="Geez")
+
+_copied_msg = {}
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern="tgm"))
-async def _(event):
-    if event.fwd_from:
-        return
-    await event.edit("`processing........`")
-    if not event.reply_to_msg_id:
-        await event.edit("`Reply di image /sticker Goblok!!`")
-        return
-    start = datetime.now()
-    r_message = await event.get_reply_message()
-    downloaded_file_name = await event.client.download_media(
-        r_message, path
-    )
-    end = datetime.now()
-    ms = (end - start).seconds
-    await event.edit(
-        f"`Downloaded to {downloaded_file_name} in {ms} seconds.`"
-    )
-    if downloaded_file_name.endswith((".webp")):
-        resize_image(downloaded_file_name)
-    try:
-        start = datetime.now()
-        media_urls = upload_file(downloaded_file_name)
-    except exceptions.TelegraphException as exc:
-        await event.edit("**Error : **" + str(exc))
-        os.remove(downloaded_file_name)
+@bot.on(geezbot_cmd(outgoing=True, pattern="tg"))
+async def telegraphcmd(event):
+    input_str = event.pattern_match.group(1)
+    if event.reply_to_msg_id:
+        getmsg = await event.get_reply_message()
+        if getmsg.photo or getmsg.video or getmsg.gif:
+            getit = await bot.download_media(getmsg)
+            try:
+                variable = uf(getit)
+                os.remove(getit)
+                nn = "https://telegra.ph" + variable[0]
+                amsg = f"Uploaded to [Telegraph]({nn}) !"
+            except Exception as e:
+                amsg = f"Error - {e}"
+            await eor(event, amsg)
+        elif "pic" in mediainfo(getmsg.media):
+            getit = await bot.download_media(getmsg)
+            try:
+                variable = uf(getit)
+                os.remove(getit)
+                nn = "https://telegra.ph" + variable[0]
+                amsg = f"Uploaded to [Telegraph]({nn}) !"
+            except Exception as e:
+                amsg = f"Error - {e}"
+            await eor(event, amsg)
+        elif getmsg.document:
+            getit = await bot.download_media(getmsg)
+            ab = open(getit)
+            cd = ab.read()
+            ab.close()
+            if input_str:
+                tcom = input_str
+            else:
+                tcom = "Geez"
+            makeit = telegraph.create_page(title=tcom, content=[f"{cd}"])
+            war = makeit["url"]
+            os.remove(getit)
+            await event.edit(f"Pasted to Telegraph : [Telegraph]({war})")
+        elif getmsg.text:
+            if input_str:
+                tcom = input_str
+            else:
+                tcom = "Geez"
+            makeit = telegraph.create_page(title=tcom, content=[f"{getmsg.text}"])
+            war = makeit["url"]
+            await event.edit(f"Pasted to Telegraph : [Telegraph]({war})")
+        else:
+            await event.edit("Reply to a Media or Text !")
     else:
-        end = datetime.now()
-        ms_two = (end - start).seconds
-        os.remove(downloaded_file_name)
-        await event.edit(
-            "**Sukses Upload to : **[Telegraph](https://telegra.ph{})\
-                    \n**Time Taken : **`{} seconds.`".format(
-                media_urls[0], (ms + ms_two)
-            ),
-            link_preview=True,
-        )
+        await event.edit("Reply to a Message !")
 
 
-def resize_image(image):
-    im = Image.open(image)
-    im.save(image, "PNG")
-
-
-CMD_HELP.update({"telegraph": f">`{geez}tgm`"
-                 "\nUsage: Upload t(text) or m(media) on Telegraph."})
+CMD_HELP.update({"telegraph": f">`{geez}tg`"
+                 "\nUsage: Upload (text) or (media) on Telegraph."})
