@@ -137,92 +137,92 @@ async def on_afk(event):
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="afk(?: |$)(.*)"))
- def _(event):
-    if event.fwd_from:
-        return
-    reply=await event.get_reply_message()
-    global USER_AFK
-    global afk_time
-    global last_afk_message
-    global last_afk_msg
-    global afk_start
-    global afk_end
-    global reason
-    global pic
-    USER_AFK={}
-    afk_time=None
-    last_afk_message={}
-    last_afk_msg={}
-    afk_end={}
-    start_1=datetime.now()
-    afk_start=start_1.replace(microsecond=0)
-    reason=event.pattern_match.group(1)
-    if reply:
-        pic=await event.client.download_media(reply)
-    else:
-        pic=None
-    if not USER_AFK:
-        last_seen_status=await bot(
-            functions.account.GetPrivacyRequest(
-    types.InputPrivacyKeyStatusTimestamp())
-        )
-        if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
-            afk_time=datetime.datetime.now()
-        USER_AFK=f"yes: {reason} {pic}"
-        if reason:
-            try:
-                if pic.endswith((".tgs", ".webp")):
-                    await bot.send_message(event.chat_id, file=pic)
+  def _(event):
+       if event.fwd_from:
+            return
+        reply = await event.get_reply_message()
+        global USER_AFK
+        global afk_time
+        global last_afk_message
+        global last_afk_msg
+        global afk_start
+        global afk_end
+        global reason
+        global pic
+        USER_AFK = {}
+        afk_time = None
+        last_afk_message = {}
+        last_afk_msg = {}
+        afk_end = {}
+        start_1 = datetime.now()
+        afk_start = start_1.replace(microsecond=0)
+        reason = event.pattern_match.group(1)
+        if reply:
+            pic = await event.client.download_media(reply)
+        else:
+            pic = None
+        if not USER_AFK:
+            last_seen_status = await bot(
+                functions.account.GetPrivacyRequest(
+                    types.InputPrivacyKeyStatusTimestamp())
+            )
+            if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
+                afk_time = datetime.datetime.now()
+            USER_AFK = f"yes: {reason} {pic}"
+            if reason:
+                try:
+                    if pic.endswith((".tgs", ".webp")):
+                        await bot.send_message(event.chat_id, file=pic)
+                        await bot.send_message(
+                            event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                        )
+                    else:
+                        await bot.send_message(
+                            event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
+                        )
+                except BaseException:
                     await bot.send_message(
                         event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
                     )
-                else:
-                    await bot.send_message(
-                        event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
-                    )
-            except BaseException:
-                await bot.send_message(
-                    event.chat_id, f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
-                )
-        else:
-            try:
-                if pic.endswith((".tgs", ".webp")):
-                    await bot.send_message(event.chat_id, file=pic)
-                    await bot.send_message(
-                        event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈"
-                    )
-                else:
-                    await bot.send_message(
-                        event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic
-                    )
-            except BaseException:
-                await bot.send_message(event.chat_id, f"**OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
-        await event.delete()
-        try:
-            if reason and pic:
-                if pic.endswith((".tgs", ".webp")):
-                    await bot.send_message(BOTLOG_CHATID, file=pic)
-                    await bot.send_message(
-                        BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
-                    )
-                else:
-                    await bot.send_message(
-                        BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
-                    )
-            elif reason:
-                await bot.send_message(
-                    BOTLOG_CHATID, f"\n**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
-                )
-            elif pic:
-                if pic.endswith((".tgs", ".webp")):
-                    await bot.send_message(BOTLOG_CHATID, file=pic)
-                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
-                else:
-                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic)
             else:
-                await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈")
-        except Exception as e:
-            BOTLOG_CHATIDger.warn(str(e))
+                try:
+                    if pic.endswith((".tgs", ".webp")):
+                        await bot.send_message(event.chat_id, file=pic)
+                        await bot.send_message(
+                            event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈"
+                        )
+                    else:
+                        await bot.send_message(
+                            event.chat_id, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic
+                        )
+                except BaseException:
+                    await bot.send_message(event.chat_id, f"**OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
+            await event.delete()
+            try:
+                if reason and pic:
+                    if pic.endswith((".tgs", ".webp")):
+                        await bot.send_message(BOTLOG_CHATID, file=pic)
+                        await bot.send_message(
+                            BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                        )
+                    else:
+                        await bot.send_message(
+                            BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
+                        )
+                elif reason:
+                    await bot.send_message(
+                        BOTLOG_CHATID, f"\n**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                    )
+                elif pic:
+                    if pic.endswith((".tgs", ".webp")):
+                        await bot.send_message(BOTLOG_CHATID, file=pic)
+                        await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
+                    else:
+                        await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic)
+                else:
+                    await bot.send_message(BOTLOG_CHATID, f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈")
+            except Exception as e:
+                BOTLOG_CHATIDger.warn(str(e))
 
 
 CMD_HELP.update({"afk": f"{geez}afk (reason) or reply media to it "
