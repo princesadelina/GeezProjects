@@ -233,18 +233,20 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f"**۝⩵꙰ཱི► 〆USERBOT ◄⩵꙰ཱི۝**\n   __running on__ **{UPSTREAM_REPO_BRANCH}** 🤖\n"
-        f"╭━━━━━━━━━━━━━━━━━━━━╮\n"
-        f"┣[•👤 `USER     :`{DEFAULTUSER}\n"
-        f"┣[ 👁‍🗨 `Username :`@{user.username}\n"
-        f"┣[•⚙️ `Telethon :` v {version.__version__}\n"
-        f"┣[•🐍 `Python   :` v {python_version()}\n"
-        f"┣[•💻 `Branch   :` {UPSTREAM_REPO_BRANCH}\n"
-        f"┣[•🛠 `Version  :` {BOT_VER}\n"
-        f"┣[•🗃 `Modules  :` {len(modules)} Loaded\n"
-        f"┣[•🕒 `Uptime   :` {uptime}\n"
-        f"╰━━━━━━━━━━━━━━━━━━━━╯\n"
-        f" •MOD BY : **{DEFAULTUSER}**")
+        f"╭═──────╼═⌘═╾───────═\n"
+        f"┃⚠️ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚠️\n"
+        f"╰═─────╼══⌘══╾─────═ \n"
+        f" ❍ `Name     :` {DEFAULTUSER} \n"
+        f" ❍ `Username :` @{user.username} \n"
+        f" ❍ `Telethon :` Ver {version.__version__} \n"
+        f" ❍ `Python   :` Ver {python_version()} \n"
+        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
+        f" ❍ `Bot Ver  :` {BOT_VER} \n"
+        f" ❍ `Modules  :` {len(modules)} Modules \n"
+        f"╭═───────╼⌘╾───────═ \n"
+        f"┃[𝗥𝗲𝗽𝗼](https://github.com/vckyou/GeezProjects)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
+        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
+        f"╰═──────╼═⌘═╾───────═")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
