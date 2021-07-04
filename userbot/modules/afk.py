@@ -137,7 +137,7 @@ async def on_afk(event):
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="afk(?: |$)(.*)"))
-  def _(event):
+async def _(event):
        if event.fwd_from:
             return
         reply = await event.get_reply_message()
