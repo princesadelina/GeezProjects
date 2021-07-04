@@ -1,7 +1,7 @@
 # Thank You Full For CatUserBot
 # Ported by VckyouuBitch
 # FROM Geez - Projects <https://github.com/vckyou/GeezProjects>
-# 
+#
 from telethon.tl.types import (
     MessageEntityMentionName)
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
