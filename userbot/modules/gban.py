@@ -1,3 +1,7 @@
+# Thank For CatUserBot
+# Ported By @VckyouuBitch
+# FROM Geez - Projects <https://github.com/Vckyou/GeezProjects>
+
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 
 from telethon.tl.types import (
@@ -80,7 +84,7 @@ async def gspider(userbot):
     except BaseException:
         return await friday.edit(f"**Terjadi Kesalahan!!**")
     if user:
-        if user.id == 1411273575:
+        if user.id == 1282429349:
             return await friday.edit(
                 f"**Didn't , Your Father Teach You ? That You Cant Gban your creator🖕**"
             )
@@ -154,7 +158,7 @@ async def gspider(userbot):
     except BaseException:
         return await friday.edit("Terjadi Kesalahan!!")
     if user:
-        if user.id == 1411273575:
+        if user.id == 1282429349:
             return await friday.edit("**You Cant gban him... as a result you can not ungban him... He is My Creator!**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
