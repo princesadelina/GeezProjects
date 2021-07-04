@@ -22,7 +22,6 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     bot,
 )
 from userbot.events import xubot_cmd
-from userbot import CUSTOM_CMD as xcm
 
 global USER_AFK
 global afk_time
@@ -100,7 +99,7 @@ async def on_afk(event):
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
     if afk_start != {}:
-        total_afk_time = str((afk_end - afk_start))
+        str((afk_end - afk_start))
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         return False
