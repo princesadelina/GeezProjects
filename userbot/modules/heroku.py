@@ -34,6 +34,8 @@ else:
    ConfigVars setting, get current var, set var or delete var...
 """
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+
 
 @bot.on(geezbot_cmd(outgoing=True,
                     pattern=r"(get|del) var(?: |$)(\w*)"))
@@ -193,7 +195,7 @@ async def dyno_usage(dyno):
                 f"│  ▸ {hours} ᴊᴀᴍ - {minutes} ᴍᴇɴɪᴛ. \n"
                 f"│  ▸ ᴘʀᴇꜱᴇɴᴛᴀꜱᴇ : {percentage}%. \n"
                 "╰┈─────────────┈ \n"
-                f" • Oᴡɴᴇʀ  : {ALIVE_NAME} \n"
+                f" • Oᴡɴᴇʀ  : {DEFAULTUSER} \n"
             )
             await asyncio.sleep(20)
             await dyno.delete()
