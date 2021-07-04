@@ -140,7 +140,7 @@ async def on_afk(event):
 async def _(event):
     if event.fwd_from:
         return
-    reply = await event.get_reply_message()
+    reply=await event.get_reply_message()
     global USER_AFK
     global afk_time
     global last_afk_message
@@ -149,25 +149,26 @@ async def _(event):
     global afk_end
     global reason
     global pic
-    USER_AFK = {}
-    afk_time = None
-    last_afk_message = {}
-    last_afk_msg = {}
-    afk_end = {}
-    start_1 = datetime.now()
-    afk_start = start_1.replace(microsecond=0)
-    reason = event.pattern_match.group(1)
+    USER_AFK={}
+    afk_time=None
+    last_afk_message={}
+    last_afk_msg={}
+    afk_end={}
+    start_1=datetime.now()
+    afk_start=start_1.replace(microsecond=0)
+    reason=event.pattern_match.group(1)
     if reply:
-        pic = await event.client.download_media(reply)
+        pic=await event.client.download_media(reply)
     else:
-        pic = None
+        pic=None
     if not USER_AFK:
-        last_seen_status = await bot(
-            functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
+        last_seen_status=await bot(
+            functions.account.GetPrivacyRequest(
+    types.InputPrivacyKeyStatusTimestamp())
         )
         if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
-            afk_time = datetime.datetime.now()
-        USER_AFK = f"yes: {reason} {pic}"
+            afk_time=datetime.datetime.now()
+        USER_AFK=f"yes: {reason} {pic}"
         if reason:
             try:
                 if pic.endswith((".tgs", ".webp")):
