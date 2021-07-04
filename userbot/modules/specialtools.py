@@ -7,7 +7,7 @@ import os
 
 import moviepy.editor as m
 
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 from userbot.events import geezbot_cmd
 from userbot import CUSTOM_CMD as geez
 
