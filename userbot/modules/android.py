@@ -70,7 +70,7 @@ async def device_info(request):
 
 
 @bot.on(geezbot_cmd(outgoing=True,
-                  pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)"))
+                    pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)"))
 async def codename_info(request):
     textx = await request.get_reply_message()
     brand = request.pattern_match.group(1).lower()
@@ -214,7 +214,8 @@ async def download_api(dl):
     return
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
+@bot.on(geezbot_cmd(outgoing=True,
+                    pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
 async def devices_specifications(request):
     textx = await request.get_reply_message()
     brand = request.pattern_match.group(1).lower()

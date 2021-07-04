@@ -713,7 +713,7 @@ async def reset_parentId():
 
 
 @bot.on(geezbot_cmd(pattern=r"gdlist(?: |$)(-l \d+)?(?: |$)?(.*)?(?: |$)",
-                  outgoing=True))
+                    outgoing=True))
 async def lists(gdrive):
     await gdrive.edit("`Getting information...`")
     checker = gdrive.pattern_match.group(1)
