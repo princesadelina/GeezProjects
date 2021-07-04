@@ -1,6 +1,6 @@
 from userbot.events import geezbot_cmd
 from userbot import CUSTOM_CMD as geez
-from userbot import CMD_HELP
+from userbot import CMD_HELP, bot
 
 # Ported By @VckyouuBitch From GeezProject
 # Devoted To GeezProject
