@@ -21,7 +21,8 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     USERS,
     bot,
 )
-from userbot.events import xubot_cmd
+from userbot.events import geezbot_cmd
+from userbot import CUSTOM_CMD as geez
 
 global USER_AFK
 global afk_time
@@ -135,7 +136,7 @@ async def on_afk(event):
             pass
 
 
-@bot.on(xubot_cmd(outgoing=True, pattern="afk(?: |$)(.*)")
+@bot.on(geezbot_cmd(outgoing=True, pattern="afk(?: |$)(.*)")
         )  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
