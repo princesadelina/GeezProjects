@@ -1,6 +1,7 @@
-# Ported by X_ImFine
-# Mukalu Kek Kontol
-
+# Thank You Full For CatUserBot
+# Ported by VckyouuBitch
+# FROM Geez - Projects <https://github.com/vckyou/GeezProjects>
+# 
 from telethon.tl.types import (
     MessageEntityMentionName)
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
@@ -86,7 +87,7 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}:`**Error! Unknown user.**")
     if user:
-        if user.id == 1411273575:
+        if user.id == :
             return await rkp.edit(f"`{ALIVE_NAME}:`**HEY THAT'S MY DEV**")
         try:
             await rk.client(BlockRequest(user))
