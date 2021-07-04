@@ -142,23 +142,23 @@ async def _(event):
     if event.fwd_from:
         return
     reply = await event.get_reply_message()
-        global USER_AFK
-        global afk_time
-        global last_afk_message
-        global last_afk_msg
-        global afk_start
-        global afk_end
-        global reason
-        global pic
-        USER_AFK = {}
-        afk_time = None
-        last_afk_message = {}
-        last_afk_msg = {}
-        afk_end = {}
-        start_1 = datetime.now()
-        afk_start = start_1.replace(microsecond=0)
-        reason = event.pattern_match.group(1)
-        if reply:
+    global USER_AFK
+    global afk_time
+    global last_afk_message
+    global last_afk_msg
+    global afk_start
+    global afk_end
+    global reason
+    global pic
+    USER_AFK = {}
+    afk_time = None
+    last_afk_message = {}
+    last_afk_msg = {}
+    afk_end = {}
+    start_1 = datetime.now()
+     afk_start = start_1.replace(microsecond=0)
+      reason = event.pattern_match.group(1)
+       if reply:
             pic = await event.client.download_media(reply)
         else:
             pic = None
