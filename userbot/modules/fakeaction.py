@@ -81,7 +81,7 @@ async def _(event):
 
 CMD_HELP.update({
     "fakeaction":
-   f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}ftyping` <jumlah teks>\
+    f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}ftyping` <jumlah teks>\
    \nUsage : Seakan akan sedang mengetik padahal tidak\
    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}faudio` <jumlah teks>\
    \nUsage : Berfungsi sama seperti ftyping tapi ini dalam bentuk fake audio\
