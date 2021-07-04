@@ -1,56 +1,59 @@
 <h1 align="center"><img src="./userbot/resources/Music.gif" width="30px"> GEEZ PROJECTS <img src="./userbot/resources/Music.gif" width="30px"></h1>
 
-<h2 align="center">▭▭▰▰▭▭▰▰▭▭▰▰▭▭▰▰▭▭▰▰</h2>
+![Geez UserBot](https://telegra.ph/file/9695504a3c013f90b6755.gif)
+
+<p align="left">
+  <a href="https://github.com/vckyou/Geez-UserBot/fork"><img src="https://img.shields.io/github/forks/vckyou/Geez-UserBot?label=Fork&style=social"></a>
+  </p>
+<p align="left">
+  <a href="https://github.com/vckyou/Geez-UserBot"><img src="https://img.shields.io/github/stars/vckyou/Geez-UserBot?style=social"></a>
+  </p>
+<p align="left">
+  <a href="https://github.com/vckyou/Geez-UserBot/blob/Geez-UserBot/LICENSE"><img src="https://img.shields.io/github/license/vckyou/Geez-UserBot?&style=social&logo=github">
+  </a></p>
+
+<a href="https://t.me/GeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group1%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/VcgSupportGroup"><img src="https://img.shields.io/badge/Join-Group2%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
 ```
-    Your Telegram account may get banned.
-    I am not responsible for any improper use of this bot
-    This bot is intended for the purpose of having fun with memes,
-    as well as efficiently managing groups.
-    You ended up spamming groups, getting reported left and right,
-    and you ended up in a Finale Battle with Telegram and at the end
-    Telegram Team deleted your account?
-    And after that, then you pointed your fingers at us
-    for getting your acoount deleted?
-    I will be rolling on the floor laughing at you.
-```
-
-
-A modular Telegram userbot running on Python3 with sqlalchemy database.
-
-Based on RaphielGang's [Telegram-Paperplane](https://github.com/RaphielGang/Telegram-Paperplane) And [ProjectDils](https://github.com/aidilaryanto/ProjectDils)
-
-## Generate String Session
-
-•Get On Telegram With Bot [KLIK HERE](https://t.me/stringxbot) 🔥
-
-•With Repl.it [KLIK HERE](https://repl.it/@ximfine/string#main.py) 🔥
-
-## How To Deploy 👷
+    Saya tidak bertanggung jawab atas penyalahgunaan bot ini.
+Bot ini dimaksudkan untuk bersenang-senang sekaligus membantu Anda
+mengelola grup secara efisien dan mengotomatiskan beberapa hal yang membosankan.
+Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 ```
-* **[HEROKU](https://www.heroku.com/) Method** 🔧
-
-  > First get API_KE & API_HASH in my.telegram.org (required)
-
-  > Get String Session (required)
-
-  > Next click Deploy the button below. 
-
-  > Fill in the required fields on heroku
-
-  > Finally turn on the app and check the logs (settings -> view logs) enjoy :)
-```
-
-## <p align="center">Deploy to Heroku Methods</p>
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/tree/master"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-yellow?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+Userbot Telegram modular berjalan di Python3 dengan database sqlalchemy.
+
+Berdasarkan RaphielGang's [Telegram-Paperplane](https://github.com/RaphielGang/Telegram-Paperplane) And [ProjectDils](https://github.com/aidilaryanto/ProjectDils)
+
+**Generate String Using Replit⤵️**
+
+<a href="https://replit.com/@Vckyou/Geez-String-Session#main.py"><img src="https://img.shields.io/badge/run-string__session.py-magenta?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
+
+### <p align="center">DEPLOY TO HEROKU</p>
+
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/GeezProjects/tree/master"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
 
 <br>
 </p>
 
+## How To Deploy 👷
+
+```
+[HEROKU](https://www.heroku.com/) Method 🔧
+
+  > First get API_KE & API_HASH in my.telegram.org (required)
+  > Get String Session (required)
+  > Next click Deploy the button below. 
+  > Fill in the required fields on heroku
+  > Finally turn on the app and check the logs (settings -> view logs) enjoy :)
+```
+
 ## Credits
+*   [Vicky](https://github.com/Vckyou) - GeezProjects
+*   [Koala](https://github.com/manusiarakitann) - Kampang-Bot
 *   [RaphielGang](https://github.com/RaphielGang) - Telegram-Paperplane
 *   [AvinashReddy3108](https://github.com/AvinashReddy3108) - PaperplaneExtended
 *   [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
