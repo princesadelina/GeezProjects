@@ -231,7 +231,7 @@ async def pipcheck(pip):
 @bot.on(geezbot_cmd(outgoing=True, pattern=r"alive$"))
 async def amireallyalive(alive):
     user = await bot.get_me()
-    uptime = await get_readable_time((time.time() - StartTime))
+    await get_readable_time((time.time() - StartTime))
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
         f"┃⚠️ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚠️\n"
