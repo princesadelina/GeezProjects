@@ -28,7 +28,7 @@ _copied_msg = {}
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="tg"))
-async def telegraphcmd(event):
+async def _(event):
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:
         getmsg = await event.get_reply_message()
