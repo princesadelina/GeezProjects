@@ -29,7 +29,7 @@ _copied_msg = {}
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="tg"))
 async def _(event):
-    input_str = event.pattern_match.group(1)
+    input_str = str(event.pattern_match.group(1))
     if event.reply_to_msg_id:
         getmsg = await event.get_reply_message()
         if getmsg.photo or getmsg.video or getmsg.gif:
