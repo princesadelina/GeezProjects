@@ -5,7 +5,8 @@
 import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot.events import register
+from userbot.events import geezbot_cmd
+from userbot import CUSTOM_CMD as geez
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 
