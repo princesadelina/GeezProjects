@@ -45,7 +45,7 @@ Based on RaphielGang's [Telegram-Paperplane](https://github.com/RaphielGang/Tele
 ## <p align="center">Deploy to Heroku Methods</p>
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/ximfine/XUserbot/tree/sql-extended"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-yellow?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/vckyou/tree/master"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-yellow?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 </p>
