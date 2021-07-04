@@ -14,6 +14,7 @@ from userbot import (
     HEROKU_APP_NAME,
     HEROKU_API_KEY,
     BOTLOG,
+    ALIVE_NAME,
     bot,
     BOTLOG_CHATID,
     CMD_HELP)
