@@ -1,9 +1,8 @@
-<h1 align="center"><img src="./userbot/resources/Music.gif" width="30px"> XUSERBOT PROJECTS <img src="./userbot/resources/Music.gif" width="30px"></h1>
+<h1 align="center"><img src="./userbot/resources/Music.gif" width="30px"> GEEZ PROJECTS <img src="./userbot/resources/Music.gif" width="30px"></h1>
 
 <h2 align="center">▭▭▰▰▭▭▰▰▭▭▰▰▭▭▰▰▭▭▰▰</h2>
 
 ```
-/☠️
     Your Telegram account may get banned.
     I am not responsible for any improper use of this bot
     This bot is intended for the purpose of having fun with memes,
@@ -14,7 +13,6 @@
     And after that, then you pointed your fingers at us
     for getting your acoount deleted?
     I will be rolling on the floor laughing at you.
-/☠️
 ```
 
 
