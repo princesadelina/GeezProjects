@@ -1,6 +1,6 @@
 {
-  "name": "Telegram XUSERBOT",
-  "description": "[XUSERBOT] A modular Telegram userbot running on Python 3.7+ with an sqlalchemy database.",
+  "name": "Telegram GeezProjects",
+  "description": "[GeezProjects] A modular Telegram userbot running on Python 3.7+ with an sqlalchemy database.",
   "keywords": [
     "telegram",
     "userbot",
@@ -8,9 +8,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/ximfine/XUserbot",
+  "repository": "https://github.com/vckyou/GeezProjects",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
-  "success_url": "https://t.me/xbotgrup",
+  "success_url": "https://t.me/GeezSupportGroup",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -175,7 +175,7 @@
     },
     "ALIVE_LOGO": {
       "description": "Image in .alive message. the value MUST A DIRECT LINK or Will Crash!",
-      "value": "https://telegra.ph/file/761b5b0241dda16821425.mp4",
+      "value": "https://telegra.ph/file/c92925807ed5a1c68ebff.png",
       "required": false
     }
   },
