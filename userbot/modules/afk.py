@@ -136,8 +136,8 @@ async def on_afk(event):
             pass
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern="afk(?: |$)(.*)", disable_errors=True)  # pylint:disable=E0602
-async def _(event):
+@bot.on(geezbot_cmd(outgoing=True, pattern="afk(?: |$)(.*)"))
+ def _(event):
     if event.fwd_from:
         return
     reply=await event.get_reply_message()
