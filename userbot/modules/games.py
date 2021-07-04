@@ -46,8 +46,8 @@ async def _(event):
     await event.delete()
 
 CMD_HELP.update({
-    "games": 
-f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}xogame`\
+    "games":
+    f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}xogame`\
 \n↳ : Mainkan game XO bersama temanmu.\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}mod <nama app>`\
 \n↳ : Dapatkan applikasi mod\
