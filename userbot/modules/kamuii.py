@@ -10,7 +10,7 @@ from userbot import CUSTOM_CMD as geez
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP
 
 
-@bot.on(geezbot_cmd(pattern="kamuii(:? |$)([1-8])?')", outgoing=True))
+@bot.on(geezbot_cmd(outgoing=True, pattern="kamuii(:? |$)([1-8])?'"))
 async def _(fry):
     await fry.edit("`Prosess, Mengaktifkan jurus tumor bolong...😜`")
     level = fry.pattern_match.group(2)
