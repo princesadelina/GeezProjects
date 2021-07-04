@@ -1234,7 +1234,7 @@ async def neko(nekobin):
     reply_id = nekobin.reply_to_msg_id
 
     if not match and not reply_id:
-        return await pstl.edit("`Cannot paste text.`")
+        return await nekobin.edit("`Cannot paste text.`")
 
     if match:
         message = match
