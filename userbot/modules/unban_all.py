@@ -9,7 +9,7 @@ from userbot import CUSTOM_CMD as geez
 from userbot import CMD_HELP
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern="unban(all)\s?(.)?"))
+@bot.on(geezbot_cmd(outgoing=True, pattern="unban(all)\\s?(.)?"))
 async def _(event):
     await event.edit("`Sedang Mencari List Banning.`")
     p = 0
