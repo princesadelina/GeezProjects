@@ -41,7 +41,7 @@ async def _(event):
                 amsg = f"Uploaded to [Telegraph]({nn}) !"
             except Exception as e:
                 amsg = f"Error - {e}"
-            await eor(event, amsg)
+            await event.edit(amsg)
         elif "pic" in mediainfo(getmsg.media):
             getit = await bot.download_media(getmsg)
             try:
@@ -51,7 +51,7 @@ async def _(event):
                 amsg = f"Uploaded to [Telegraph]({nn}) !"
             except Exception as e:
                 amsg = f"Error - {e}"
-            await eor(event, amsg)
+            await event.edit(amsg)
         elif getmsg.document:
             getit = await bot.download_media(getmsg)
             ab = open(getit)
