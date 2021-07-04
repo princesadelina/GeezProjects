@@ -61,7 +61,7 @@ async def _(e):
         await e.edit(f"`{str(ex)}`")
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern=r"stopvc$"))
+@bot.on(geezbot_cmd(outgoing=True, pattern=r"vcinvite$"))
 async def _(e):
     await e.edit("`Inviting Members to Voice Chat...`")
     users = []
@@ -83,9 +83,9 @@ CMD_HELP.update(
     {
         "calls": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}startvc`\
          \n↳ : Start Group Call in a group.\
-         f\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}stopvc`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}stopvc`\
          \n↳ : `Stop Group Call in a group.`\
-         f\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}vcinvite`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{geez}vcinvite`\
          \n↳ : Invite all members of group in Group Call. (You must be joined)."
     }
 )
