@@ -135,18 +135,18 @@ CMD_HELP.update(
     {
         "random": f">`{geez}random <item1> <item2> ... <itemN>`"
         "\nUsage: Get a random item from the list of items.",
-        "sleep": ">`{geez}sleep <seconds>`"
+        "sleep": f">`{geez}sleep <seconds>`"
         "\nUsage: Let yours snooze for a few seconds.",
-        "shutdown": ">`{geez}shutdown`"
+        "shutdown": f">`{geez}shutdown`"
         "\nUsage: Shutdown bot",
-        "repo": ">`{geez}repo`"
+        "repo": f">`{geez}repo`"
         "\nUsage: Github Repo of this bot",
-        "readme": ">`{geez}readme`"
+        "readme": f">`{geez}readme`"
         "\nUsage: Provide links to setup the userbot and it's modules.",
-        "repeat": ">`{geez}repeat <no> <text>`"
+        "repeat": f">`{geez}repeat <no> <text>`"
         "\nUsage: Repeats the text for a number of times. Don't confuse this with spam tho.",
-        "restart": ">`{geez}restart`"
+        "restart": f">`{geez}restart`"
         "\nUsage: Restarts the bot !!",
-        "raw": ">`{geez}raw`"
+        "raw": f">`{geez}raw`"
         "\nUsage: Get detailed JSON-like formatted data about replied message.",
     })
