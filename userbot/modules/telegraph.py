@@ -101,5 +101,6 @@ def resize_image(image):
     im = Image.open(image)
     im.save(image, "PNG")
 
+
 CMD_HELP.update({"telegraph": f">`{geez}tg`"
                  "\nUsage: Upload (text) or (media) on Telegraph."})
