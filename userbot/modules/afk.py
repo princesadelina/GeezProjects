@@ -1,6 +1,7 @@
 # Copyright (C) 2020 TeamUltroid
 #
-# Ported by X_ImFine
+# Ported By @VckyouuBitch
+# FROM Geez - Projects <https://github.com/vckyou/GeezProjects>
 
 import os
 import asyncio
