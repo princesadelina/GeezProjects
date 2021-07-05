@@ -12,6 +12,7 @@ from userbot import TEMP_DOWNLOAD_DIRECTORY, bot
 @bot.on(geezbot_cmd(outgoing=True, pattern="kamuii(?: |$)(.*)"))
 async def _(fry):
     await fry.edit("`Prosess, Mengaktifkan jurus tumor bolong...😜`")
+    level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
