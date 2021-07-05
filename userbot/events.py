@@ -273,6 +273,7 @@ def command(**args):
 
     return decorator
 
+
 def register(**args):
     """ Register a new event. """
     pattern = args.get('pattern', None)
