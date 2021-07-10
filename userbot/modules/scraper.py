@@ -20,7 +20,7 @@ async def scrapmem(event):
     chat = event.chat_id
     await event.edit("`Please wait...`")
     client = event.client
-    members = await client.get_participants(chat, aggressive=True)
+    members = await event.client.get_participants(chat, aggressive=True)
 
     with open("members.csv", "w", encoding="UTF-8") as f:
         writer = csv.writer(f, delimiter=",", lineterminator="\n")
@@ -50,7 +50,7 @@ async def admem(event):
             await asyncio.sleep(900)
         try:
             userin = InputPeerUser(user['id'], user['hash'])
-            await client(InviteToChannelRequest(chat, [userin]))
+            await event.client(InviteToChannelRequest(chat, [userin]))
             await asyncio.sleep(random.randrange(5, 7))
             await event.edit(f"`Menambahkan {n} anggota...`")
         except TypeError:
