@@ -1,7 +1,6 @@
 import asyncio
 import csv
 import random
-import traceback
 
 from telethon.errors.rpcerrorlist import (
     UserAlreadyParticipantError,
@@ -19,7 +18,7 @@ from telethon.tl.types import InputPeerUser
 @bot.on(geezbot_cmd(outgoing=True, pattern=r"getmemb ?(.*)"))
 async def scrapmem(event):
     chat = event.chat_id
-    y = await event.edit("`Please wait...`")
+    await event.edit("`Please wait...`")
     client = event.client
     members = await client.get_participants(chat, aggressive=True)
 
@@ -33,7 +32,7 @@ async def scrapmem(event):
 
 @bot.on(geezbot_cmd(outgoing=True, pattern=r"addmemb ?(.*)"))
 async def admem(event):
-    x = await event.edit("`Adding 0 members...`")
+    await event.edit("`Adding 0 members...`")
     chat = await event.get_chat()
     client = event.client
     users = []
@@ -76,5 +75,5 @@ CMD_HELP.update({
    \nUsage : Menambahkan Anggota ke Obrolan\
    \nTata Cara Menggunakannya:  Pertama, Anda harus melakukan {geez}getmemb terlebih dahulu dari Obrolan. Lalu buka grup Anda dan ketik {geez}addmemb untuk menambahkan mereka ke grup Anda."
 
-   
+
 })
