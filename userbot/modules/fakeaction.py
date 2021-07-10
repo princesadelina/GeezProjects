@@ -62,7 +62,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@bot.on(geezbot_cmd(outgoing=True, pattern="fgamd(?: |$)(.*)"))
+@bot.on(geezbot_cmd(outgoing=True, pattern="fgame(?: |$)(.*)"))
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
