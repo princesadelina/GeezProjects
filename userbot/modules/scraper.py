@@ -1,3 +1,13 @@
+# Coded By Abdul <https://github.com/DoellBarr>
+# Ported By VckyAuliaZulfikar @VckyouuBitch
+#
+# Geez Projects UserBot
+# Copyright (C) 2021 GeezProjects
+#
+# This file is a part of <https://github.com/vckyou/GeezProjects/>
+# PLease read the GNU Affero General Public License in
+# <https://github.com/vckyou/GeezProjects/blob/master/LICENSE>.
+
 import asyncio
 import csv
 import random
