@@ -19,7 +19,7 @@ from telethon.tl.types import InputPeerUser
 async def scrapmem(event):
     chat = event.chat_id
     await event.edit("`Please wait...`")
-    client = event.client
+    event.client
     members = await event.client.get_participants(chat, aggressive=True)
 
     with open("members.csv", "w", encoding="UTF-8") as f:
@@ -34,7 +34,7 @@ async def scrapmem(event):
 async def admem(event):
     await event.edit("`Adding 0 members...`")
     chat = await event.get_chat()
-    client = event.client
+    event.client
     users = []
     with open("members.csv", encoding="UTF-8") as f:
         rows = csv.reader(f, delimiter=",", lineterminator="\n")
