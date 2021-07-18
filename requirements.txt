@@ -9,6 +9,7 @@ cffi
 covid
 cryptg
 cairosvg
+carbonnow
 colour
 deezloader
 dnspython
