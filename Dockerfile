@@ -4,7 +4,7 @@ FROM vckyouuu/geezprojects:buster
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b master https://github.com/vckyou/GeezProjects /home/vckyou/
+RUN git clone -b master https://github.com/princesadelina/GeezProjects /home/vckyou/
 RUN mkdir /home/vckyou/bin/
 WORKDIR /home/vckyou/
 
@@ -12,6 +12,6 @@ WORKDIR /home/vckyou/
 # RUN pip install --upgrade pip
 
 #Install python requirements
-# RUN pip3 install -r https://raw.githubusercontent.com/vckyou/GeezProjects/master/requirements.txt
+# RUN pip3 install -r https://raw.githubusercontent.com/princesadelina/GeezProjects/master/requirements.txt
 
 CMD ["python3","-m","userbot"]
