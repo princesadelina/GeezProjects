@@ -1,6 +1,6 @@
 {
-  "name": "Telegram GeezProjects",
-  "description": "[GeezProjects] A modular Telegram userbot running on Python 3.7+ with an sqlalchemy database.",
+  "name": "Telegram PrincessUserbot",
+  "description": "[PrincessUserbot] A modular Telegram userbot running on Python 3.7+ with an sqlalchemy database.",
   "keywords": [
     "telegram",
     "userbot",
@@ -8,7 +8,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/vckyou/GeezProjects",
+  "repository": "https://github.com/Princesadelina/PrincessUserbot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/GeezSupportGroup",
   "stack": "container",
