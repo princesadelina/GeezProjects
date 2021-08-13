@@ -1,6 +1,6 @@
-<h1 align="center"><img src="./userbot/resources/Music.gif" width="30px"> GEEZ PROJECTS <img src="./userbot/resources/Music.gif" width="30px"></h1>
+<h1 align="center">🦄Princes Adelina
 
-![Geez UserBot](https://telegra.ph/file/9695504a3c013f90b6755.gif)
+![Geez UserBot](https://telegra.ph/file/4198eec7fe52a3f132841.jpg)
 
 <p align="left">
   <a href="https://github.com/vckyou/GeezProjects/fork"><img src="https://img.shields.io/github/forks/vckyou/GeezProjects?label=Fork&style=social"></a>
