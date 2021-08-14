@@ -277,7 +277,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {}".format("⚙️", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {}".format("🦄", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
@@ -348,7 +348,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Geez-Projects modules helper",
+                    "Princess Userbot modules helper",
                     text="List of Modules",
                     buttons=[],
                     link_preview=True,
@@ -361,7 +361,7 @@ with bot:
                         [
                             custom.Button.url(
                                 "GitHub Repo",
-                                "https://github.com/vckyou/Geez-Projects",
+                                "https://github.com/princesadelina/Princessuserbot",
                             ),
                             custom.Button.url(
                                 "Group Support",
@@ -436,7 +436,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = "Please make for yourself, don't use my bot!"
+                reply_pop_up_alert = "deploy sendiri, jangan pake punya princess"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
