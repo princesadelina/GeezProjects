@@ -234,18 +234,18 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"╭═──────╼═⌘═╾───────═\n"
-        f"┃⚠️ＧΞ ΞＺ - ＰＲＯＪＥＣＴ⚠️\n"
+        f"┃   🦄 PRINCESS USERBOT🦄\n"
         f"╰═─────╼══⌘══╾─────═ \n"
-        f" ❍ `Name     :` {DEFAULTUSER} \n"
-        f" ❍ `Username :` @{user.username} \n"
-        f" ❍ `Telethon :` Ver {version.__version__} \n"
-        f" ❍ `Python   :` Ver {python_version()} \n"
-        f" ❍ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
-        f" ❍ `Bot Ver  :` {BOT_VER} \n"
-        f" ❍ `Modules  :` {len(modules)} Modules \n"
+        f" 👸 `Name     :` {DEFAULTUSER} \n"
+        f" 🏷 `Username :` @{user.username} \n"
+        f" 🧩 `Telethon :` Ver {version.__version__} \n"
+        f" 🐍 `Python   :` Ver {python_version()} \n"
+        f" 🎞 `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
+        f" 🤖 `Bot Ver  :` {BOT_VER} \n"
+        f" 📁 `Modules  :` {len(modules)} Modules \n"
         f"╭═───────╼⌘╾───────═ \n"
-        f"┃[𝗥𝗲𝗽𝗼](https://github.com/vckyou/GeezProjects)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
-        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/vckyouuu)\n"
+        f"┃[𝗥𝗲𝗽𝗼](https://github.com/princesadelina/princessuserbot)  |  [𝗦𝘂𝗽𝗽𝗼𝗿𝘁](t.me/GeezSupportGroup)  |  "
+        f"[𝗜𝗻𝘀𝘁𝗮𝗴𝗿𝗮𝗺](https://Instagram.com/adelinaa07_)\n"
         f"╰═──────╼═⌘═╾───────═")
     if ALIVE_LOGO:
         try:
