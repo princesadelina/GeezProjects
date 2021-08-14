@@ -26,7 +26,7 @@ async def help(event):
             await event.delete()
     else:
         await event.edit(f"**╭────────────────────**\
-            \n│   Help for GEEZ PROJECTS \
+            \n│  Help for PRINCESS USERBOT \
             \n╰────────────────── \
             \n╭────────────────────\
             \n│  Untuk melihat lengkap CMD\
