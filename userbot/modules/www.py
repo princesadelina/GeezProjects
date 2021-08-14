@@ -92,7 +92,7 @@ async def pingme(pong):
     await pong.edit("🧬🦄🧬🦄")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**Unicorn!! 👸🏻🦄**\n**Belle 🌻** : %sms\n**Snowhite🍎** : {uptime}🕛" % (duration))
+    await pong.edit(f"**Unicorn!! 🦄**\n**Dancing🩰** : %sms\n**Sleepbeauty🏩** : {uptime}🐙" % (duration))
 
 
 @bot.on(geezbot_cmd(outgoing=True, pattern="pong$"))
