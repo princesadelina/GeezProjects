@@ -22,6 +22,6 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "adel": f"`{geez}adel`\
+    "adel": f"`adel`\
 \nUsage: memperkenalkan diri"
 })
