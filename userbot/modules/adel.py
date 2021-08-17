@@ -3,7 +3,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.a(?: |$)(.*)')
+@register(outgoing=True, pattern='^.adel(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -21,5 +21,7 @@ async def typewriter(typew):
 
 
 
-CMD_HELP.update({"animasi": f">`{geez}a`"
-                 "\nUsage biar orang manggil princess"})
+CMD_HELP.update({
+    "adel": f"`{geez}adel`\
+\nUsage: memperkenalkan diri"
+})
