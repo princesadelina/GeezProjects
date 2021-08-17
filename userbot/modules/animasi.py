@@ -3,15 +3,17 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.sadboy(?: |$)(.*)')
+@register(outgoing=True, pattern='^.a(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
-    await typew.edit("`Pertama-tama kamu cantik`")
+    await typew.edit("**Hy**")
     sleep(2)
-    await typew.edit("`Kedua kamu manis`")
+    await typew.edit("**salken💅🏻**")
     sleep(1)
-    await typew.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
+    await typew.edit("**princess unicorn**")
+    sleep(2)
+    await typew.edit("**call me princess🦄**")
 
 # Create by myself @localheart
 
