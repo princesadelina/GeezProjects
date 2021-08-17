@@ -1,6 +1,7 @@
 from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
+from userbot import CUSTOM_CMD as geez
 
 
 @register(outgoing=True, pattern='^.adel(?: |$)(.*)')
@@ -22,6 +23,6 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "adel": f"`adel`\
+    "adel": f"`{geez}adel`\
 \nUsage: memperkenalkan diri"
 })
