@@ -21,5 +21,5 @@ async def typewriter(typew):
 
 
 
-CMD_HELP.update({"a": f"memperkenalkan diri "
+CMD_HELP.update({"animasi": f">`{geez}a`"
                  "\nUsage biar orang manggil princess"})
