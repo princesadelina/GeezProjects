@@ -5,7 +5,7 @@ from userbot.events import geezbot_cmd
 from userbot import CUSTOM_CMD as geez
 
 
-@register(outgoing=True, pattern='^.adel(?: |$)(.*)')
+@register(outgoing=True, pattern='^adel(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
