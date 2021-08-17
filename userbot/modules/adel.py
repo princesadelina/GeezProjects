@@ -1,6 +1,7 @@
 from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
+from userbot.events import geezbot_cmd
 from userbot import CUSTOM_CMD as geez
 
 
